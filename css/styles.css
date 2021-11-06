@@ -1,0 +1,318 @@
+body {
+    font-family: 'Andada Pro', serif;
+    font-size: 18px;
+    background-color: #15181e;
+    color: #ceddec;
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
+button {
+    background: #3d3c44;
+    border: none;
+    color: #c4c4c4;
+    padding: 7px 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 7px 3px 3px 3px;
+}
+
+button:hover {
+    background-color: #c4c4c4;
+    color: #202327;
+    border: 1px solid #202327;
+}
+
+
+.icon {
+    width: 15px;
+    height: 15px;
+    background: url("/search.svg");
+}
+
+
+.container {
+    width: 100%;
+
+}
+
+/*HEADER*/
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+span.logo {
+    display: flex;
+    justify-content: space-around;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr 2fr);
+    width: 100%;
+    min-width: 840px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.basket-image {
+    width: 20px;
+}
+
+.basket-link {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*SEARCH PANEL*/
+.search-panel {
+    height: 35px;
+    background: #c4c4c4;
+    border-radius: 5px;
+    padding: 3px;
+    display: flex;
+}
+
+.search-input {
+    flex-grow: 1;
+    background: #fff;
+    border-radius: 5px;
+    border: none;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.search-button-text {
+    margin-left: 5px;
+}
+
+.search-button:hover {
+    border: none;
+}
+
+/* INTRO */
+
+.intro-big {
+    display: flex;
+    justify-content: center;
+}
+
+.intro {
+    width: 980px;
+    background-image: url(https://p0.pikist.com/photos/303/564/work-desktop-computer-desk-keyboard-business-workplace-mac-technology.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.intro-text {
+    width: 600px;
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    line-height: 1.7;
+    font-size: 36px;
+    color: #000;
+}
+
+
+
+/*CARDS*/
+.page-title {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.card-image {
+    border-radius: 20px;
+    width: 250px;
+    object-fit: cover;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    box-shadow: 0 0 20px #2d312d;
+    background-color: #242525;
+    border-radius: 20px;
+}
+
+.card-title {
+    font-size: 16px;
+    line-height: 19px;
+    color: #c4c4c4;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+.card-header {
+    max-width: 253px;
+
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+.card-text {
+    font-size: 14px;
+    line-height: 16px;
+    color: #c4c4c4;
+    margin-bottom: 4px;
+    margin-top: 0;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/*POPUP*/
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    opacity: 1;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    transition: all 0.3s cubic-bezier(0.55, 0.64, 0.61, 0.87) 0s;
+}
+
+.popup:target {
+    opacity: 1;
+
+}
+.popup-body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+.popup-content {
+    background-color: #fff;
+    color: #202327;
+    max-width: 800px;
+    padding: 30px;
+    position: relative;
+}
+.popup-close {
+    position: absolute;
+    right: 27px;
+    top: 44px;
+    font-size: 40px;
+    color: black;
+    text-decoration: none;
+    transform: rotate(45deg);
+}
+.popup-title {
+    font-size: 33px;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.checkout {
+    width: 150px;
+    height: 50px;
+    margin-top: 20px;
+    background-color: #15181e;
+    color: white;
+    font-size: 24px;
+    position: relative;
+    left: 10%;
+    transform: translate(-50%, 0);
+    justify-content: center;
+}
+/*POPUP-BASKET*/
+.popup-basket {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 2px solid;
+    margin: 8px;
+    border-radius: 10px;
+}
+
+.popup-basket-name {
+    display: flex;
+    align-items: center;
+}
+
+.popup-list {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 300px;
+    width: 750px;
+}
+
+.popup-basket-image {
+    border-radius: 20px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.delete-from-basket {
+    color: #202327;
+    background-color: #ffffff;
+    padding: 0;
+    border-radius: 0;
+    font-size: 90%;
+}
+
+.delete-from-basket:hover {
+    color: #c4c4c4;
+    background-color: #15181e;
+    border-radius: 7px 3px 3px 3px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+

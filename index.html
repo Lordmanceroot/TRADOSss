@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet"
+          href="css/normalize.css">
+    <link rel="stylesheet"
+          type="text/css"
+          href="css/styles.css"/>
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;500;700&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header-top container">
+    <!-- LOGO -->
+    <div class="navbar">
+        <a href="index.html"
+           class="logo">
+            <span class="logo">TRADOS</span>
+        </a>
+        <!-- NAVBAR PANEL -->
+        <nav class="navbar-panel">
+            <!-- NAVBAR MENU -->
+            <div class="navbar-menu">
+                <a href="#"
+                   class="navbar-item"><span class="navbar-item">Категории</span></a>
+                <a href="#"
+                   class="navbar-item"><span class="navbar-item">Доставка</span></a>
+                <a href="#"
+                   class="navbar-item"><span class="navbar-item">О нас</span></a>
+            </div>
+        </nav>
+        <div class="basket">
+            <a class="basket-link"
+
+               onclick="clickOpen()">
+                <img class="basket-image"
+                     src="https://mstatic.wbstatic.net/sitemobile/4.10.0/static/media/basket.665fe316.svg"
+                     alt="">
+                <span>Корзина</span>
+            </a>
+        </div>
+
+        <div class="login">
+            <button class="button-login">Вход и регистрация</button>
+        </div>
+
+    </div>
+
+    <!-- SEARCH PANEL -->
+    <div class="search-panel container">
+        <input type="search"
+               class="search-input"
+               placeholder="Поиск по товарам"/>
+        <button class="search-button">
+            <div class="icon"> </div>
+
+            <span class="search-button-text">Найти</span>
+        </button>
+    </div>
+</header>
+
+<div id="open">
+    <template id="template1">
+        <div id="popup"
+             class="popup">
+            <div class="popup-body">
+                <div class="popup-content">
+                    <a onclick="clickClose()"
+                       class="popup-close">+</a>
+                    <div class="popup-title">Ваш заказ:</div>
+                    <div class="popup-list">
+
+                        <template id="popup-template">
+                            <div class="popup-basket">
+                                <button id="delete-from-basket" class="delete-from-basket">[X]</button>
+                                <div class="popup-basket-name">
+                                    <img class="popup-basket-image" alt="img"/>
+                                    <span class="popup-card"></span>
+                                </div>
+
+<!--                                <div class="counter">-->
+<!--                                    <button class="counter-btn" data-direction="minus">-</button>-->
+<!--                                    <input type="text" value="0" class="counter-value">-->
+<!--                                    <button class="counter-btn" data-direction="plus">+</button>-->
+<!--                                </div>-->
+
+                                <div class="basket-price">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </template>
+
+                    </div>
+                    <div class="buttons">
+                        <button class="checkout">Заказать</button>
+                        <button type="reset" class="checkout" onclick="removeAllItems()">Очистить корзину</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </template>
+
+</div>
+
+<!-- INTRO -->
+<div class="intro-big">
+    <div class="intro container">
+        <h1 class="intro-text">
+            Каждый день в мире электроники выпускаются новые устройства и гаджеты,
+            уследить за которыми практически невозможно. Мы анализируем рынок
+            электроники вместо вас и предлагаем вам крутые находки. Здесь Вы найдёте
+            самые топовые устройства и гаджеты.
+        </h1>
+    </div>
+</div>
+<!-- recommendations -->
+
+<main class="main container">
+    <div class="page-title"><span>Рекомендации для вас</span></div>
+    <div class="cards">
+
+        <template id="card-template">
+            <div class="card">
+                <div class="card-header">
+                    <a href="#"
+                       class="card-link">
+                        <img class="card-image" alt="img"/>
+                        <h2 class="card-title"> </h2>
+                    </a>
+                </div>
+                <div class="card-footer">
+                    <strong class="card-price"> </strong>
+                    <button class="card-in-basket"><span> </span></button>
+                </div>
+            </div>
+        </template>
+
+    </div>
+</main>
+
+<div class="footer container">
+    <hr class="header_underline"/>
+    <ul class="footer-item">
+        <li class="menu-item">
+            <a href="#"
+               class="menu-link">Адрес: ул. Мира 97</a>
+        </li>
+        <li class="menu-item">
+            <div class="phone">
+                <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+
+<script src="test1.js"></script>
+<!--<script src="script.js"></script>-->
+<!--<script src="popup.js"></script>-->
+</body>
+</html>
